@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID</title>
+    <style>
+      /*FRACTIONAL UNITS WORK BEST*/
+      .wrapper {
+        display: grid;
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        /*SET HEIGHT OF ROWS TO 60 PIX AND SCALE IT TO BE RESPONSIVE WITH MINMAX()*/
+        grid-auto-rows: minmax(60px, auto);
+      }
+      .wrapper > div {
+        background-color: #eee;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(odd) {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>Lorem ipsum dolor sit amet.</div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+        consequuntur laborum rerum aut explicabo aspernatur, porro eveniet,
+        reprehenderit minima libero incidunt alias distinctio dolores omnis at
+        officiis? Cumque assumenda in, suscipit sint dolores eos amet ratione
+        fuga ipsa facere. Amet perferendis nobis accusantium. Blanditiis,
+        nostrum.
+      </div>
+      <div>Lorem ipsum dolor sit amet.</div>
+      <div>Lorem ipsum dolor sit amet.</div>
+      <div>Lorem ipsum dolor sit amet.</div>
+      <div>Lorem ipsum dolor sit amet.</div>
+    </div>
+  </body>
+</html>

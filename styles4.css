@@ -1,29 +1,25 @@
-.container > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  color: #ffeead;
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 60px 200px 60px;
+
+  /*SHORT HAND*/
+  /* grid-template: repeat(2, 40px) / repeat(2, 1fr); */
+
+  grid-gap: 3px;
 }
 
-html,
-body {
-  background-color: #ffeead;
-  margin: 10px;
+.header {
+  /*YOU CAN USE -1 THAT JUST MEANS TO EXPAND TO THE LAST COLUMN LINE*/
+  grid-column: 1 / -1;
 }
 
-.container > div:nth-child(1n) {
-  background-color: #96ceb4;
+.menu {
 }
 
-.container > div:nth-child(3n) {
-  background-color: #88d8b0;
+.content {
 }
 
-.container > div:nth-child(2n) {
-  background-color: #ff6f69;
-}
-
-.container > div:nth-child(4n) {
-  background-color: #ffcc5c;
+.footer {
+  grid-column: 1 / -1;
 }

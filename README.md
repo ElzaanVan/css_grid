@@ -52,6 +52,12 @@
 
 ##
 
+# grid-9
+
+## Just a simple example of how to use grid & flex!
+
+##
+
 ### Thank you to Traversy media https://youtu.be/jV8B24rSN5o for the crash course
 
 ### Thank you to Scrimba https://scrimba.com/learn/cssgrid for the great content

@@ -1,27 +1,42 @@
 .container {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 60px 200px 60px;
-
+  grid-template-rows: 60px auto 60px;
+  grid-gap: 3px;
   /*SHORT HAND*/
   /* grid-template: repeat(2, 40px) / repeat(2, 1fr); */
 
-  grid-gap: 3px;
+  /*VISUAL REPRESENTATION OF WHAT YOU WANT YOUR WEBPAGE TO LOOK LIKE*/
+  grid-template-areas:
+    "m h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "m f f f f f f f f f f f";
+  /*DOTS will create a white space*/
 }
 
 .header {
   /*YOU CAN USE -1 THAT JUST MEANS TO EXPAND TO THE LAST COLUMN LINE*/
-  grid-column: 2 / -1;
+  /* grid-column: 1 / -1; */
+
+  /*GRID AREA*/
+  grid-area: h;
 }
 
 .menu {
-  grid-row: 1 / 3;
+  grid-area: m;
 }
 
 .content {
-  grid-column: 2 / -1;
+  /* grid-column: 2 / -1; */
+
+  /*GRID AREA*/
+  grid-area: c;
 }
 
 .footer {
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
+
+  /*GRID AREA*/
+  grid-area: f;
 }

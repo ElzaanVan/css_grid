@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 60px 200px 60px;
 
   /*SHORT HAND*/
@@ -11,13 +11,15 @@
 
 .header {
   /*YOU CAN USE -1 THAT JUST MEANS TO EXPAND TO THE LAST COLUMN LINE*/
-  grid-column: 1 / -1;
+  grid-column: 2 / -1;
 }
 
 .menu {
+  grid-row: 1 / 3;
 }
 
 .content {
+  grid-column: 2 / -1;
 }
 
 .footer {

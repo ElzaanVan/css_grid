@@ -1,0 +1,7 @@
+.container {
+  display: grid;
+  grid-gap: 5px;
+  /*COLUMNS WILL ALWAYS FIT THE ENTIRE GRID*/
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+}
